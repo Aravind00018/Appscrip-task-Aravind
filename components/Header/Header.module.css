@@ -1,0 +1,107 @@
+.header {
+  width: 100%;
+  background-color: var(--color-white);
+  border-bottom: 1px solid transparent;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px var(--content-padding-x) 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brandIconLink {
+  display: flex;
+  align-items: center;
+}
+
+.brandIcon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.mobileMenuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+}
+
+.centerGroup {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.logoText {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--color-black);
+  text-decoration: none;
+  font-family: var(--font-primary);
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  transition: opacity 0.2s ease;
+}
+
+.iconButton:hover {
+  opacity: 0.7;
+}
+
+.langSelector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px var(--content-padding-x);
+  }
+
+  .mobileMenuButton {
+    display: flex;
+  }
+
+  .logoText {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .rightGroup {
+    gap: 14px;
+  }
+}

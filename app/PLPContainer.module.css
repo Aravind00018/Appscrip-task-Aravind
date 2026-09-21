@@ -1,0 +1,35 @@
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContentContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 36px var(--content-padding-x) 96px;
+  width: 100%;
+}
+
+.contentLayout {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.gridSection {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .mainContentContainer {
+    padding: 24px var(--content-padding-x) 64px;
+  }
+
+  .contentLayout {
+    gap: 0;
+  }
+}

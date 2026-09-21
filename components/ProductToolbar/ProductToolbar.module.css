@@ -1,0 +1,106 @@
+.toolbar {
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  padding: 24px 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.itemCount {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.filterToggleDesktop {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  color: var(--color-text-secondary);
+  transition: color 0.15s ease;
+}
+
+.filterToggleDesktop:hover {
+  color: var(--color-text-primary);
+}
+
+.arrowIcon {
+  color: var(--color-text-secondary);
+}
+
+.arrowRotated {
+  transform: rotate(0deg);
+}
+
+.toggleText {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.filterToggleMobile {
+  display: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--color-text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 16px 0;
+  }
+
+  .leftGroup {
+    gap: 16px;
+  }
+
+  .itemCount {
+    font-size: 13px;
+  }
+
+  .filterToggleDesktop {
+    display: none;
+  }
+
+  .filterToggleMobile {
+    display: block;
+  }
+
+  .filterToggleMobile .toggleText {
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
