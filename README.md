@@ -35,7 +35,7 @@ This application represents a single, unified, and fully responsive Next.js appl
 ### Installation
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/your-username/Appscrip-task-Aravind.git
+git clone https://github.com/Aravind00018/Appscrip-task-Aravind.git
 cd Appscrip-task-Aravind
 npm install
 ```
