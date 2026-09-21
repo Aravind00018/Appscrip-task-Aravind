@@ -104,18 +104,9 @@ export default function PLPContainer({ initialProducts }: PLPContainerProps) {
         {/* Content Section: Sidebar + Product Grid */}
         <div className={styles.mainContentContainer}>
           <div className={styles.contentLayout}>
-            {/* Filter Sidebar on Desktop */}
-            {isFilterVisible && (
-              <FilterSidebar
-                isCustomizable={isCustomizable}
-                onCustomizableChange={setIsCustomizable}
-                selectedIdealFor={selectedIdealFor}
-                onIdealForChange={setSelectedIdealFor}
-              />
-            )}
-
-            {/* Mobile Filter Drawer */}
+            {/* Filter Sidebar (Desktop/Tablet & Mobile Drawer) */}
             <FilterSidebar
+              isVisible={isFilterVisible}
               isCustomizable={isCustomizable}
               onCustomizableChange={setIsCustomizable}
               selectedIdealFor={selectedIdealFor}

@@ -34,12 +34,13 @@ export default function ProductGrid({
       role="region"
       aria-label="Product catalogue"
     >
-      {products.map((product) => (
+      {products.map((product, index) => (
         <ProductCard
           key={product.id}
           product={product}
           isFavorited={wishlistIds.has(product.id)}
           onToggleFavorite={onToggleWishlist}
+          priority={index < 4}
         />
       ))}
     </div>

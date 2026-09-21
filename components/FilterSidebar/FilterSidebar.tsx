@@ -5,6 +5,7 @@ import FilterSection from './FilterSection';
 import styles from './FilterSidebar.module.css';
 
 interface FilterSidebarProps {
+  isVisible?: boolean;
   isCustomizable: boolean;
   onCustomizableChange: (val: boolean) => void;
   selectedIdealFor: string[];
@@ -15,6 +16,7 @@ interface FilterSidebarProps {
 }
 
 export default function FilterSidebar({
+  isVisible = true,
   isCustomizable,
   onCustomizableChange,
   selectedIdealFor,
@@ -187,12 +189,14 @@ export default function FilterSidebar({
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <aside className={styles.desktopSidebar} aria-label="Product Filters">
-        {sidebarContent}
-      </aside>
+      {/* Desktop / Tablet Sidebar (Rendered once, only when visible) */}
+      {isVisible && (
+        <aside className={styles.desktopSidebar} aria-label="Product Filters">
+          {sidebarContent}
+        </aside>
+      )}
 
-      {/* Mobile Filter Drawer */}
+      {/* Mobile Filter Drawer (Only present in DOM when user opens it) */}
       {isMobileOpen && (
         <div className={styles.mobileOverlay} onClick={onCloseMobile}>
           <div

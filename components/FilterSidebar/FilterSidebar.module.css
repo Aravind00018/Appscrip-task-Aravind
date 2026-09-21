@@ -173,7 +173,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .desktopSidebar {
+    width: 240px;
+  }
+}
+
+@media (max-width: 767px) {
   .desktopSidebar {
     display: none;
   }

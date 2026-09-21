@@ -9,12 +9,14 @@ interface ProductCardProps {
   product: Product;
   isFavorited: boolean;
   onToggleFavorite: (id: number) => void;
+  priority?: boolean;
 }
 
 export default function ProductCard({
   product,
   isFavorited,
   onToggleFavorite,
+  priority = false,
 }: ProductCardProps) {
   return (
     <article className={styles.card}>
@@ -30,7 +32,8 @@ export default function ProductCard({
           width={300}
           height={399}
           className={`${styles.image} ${product.isOutOfStock ? styles.outOfStockImage : ''}`}
-          loading="lazy"
+          priority={priority}
+          loading={priority ? 'eager' : 'lazy'}
         />
 
         {product.isOutOfStock && (
