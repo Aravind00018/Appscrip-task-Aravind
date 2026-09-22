@@ -15,16 +15,17 @@ export const metadata: Metadata = {
     description:
       'Explore our curated collection of artisanal bags, lifestyle accessories, and hand-crafted pieces.',
     type: 'website',
-    url: 'https://mettamuse.com/shop',
+    url: '/',
   },
   alternates: {
-    canonical: 'https://mettamuse.com/shop',
+    canonical: '/',
   },
 };
 
 export default async function Page() {
   // Server-side fetch
   const products = await getProducts();
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://appscrip-task-aravind.vercel.app';
 
   // Structured Data Schema (JSON-LD) for CollectionPage & ItemList
   const jsonLd = {
@@ -33,7 +34,7 @@ export default async function Page() {
     name: 'Discover Our Products',
     description:
       'Explore our curated collection of artisanal bags, lifestyle accessories, and hand-crafted pieces.',
-    url: 'https://mettamuse.com/shop',
+    url: siteUrl,
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: products.length,
@@ -44,7 +45,7 @@ export default async function Page() {
           '@type': 'Product',
           name: product.title,
           description: product.description,
-          image: `https://mettamuse.com${product.image}`,
+          image: `${siteUrl}${product.image}`,
           category: product.category,
           offers: {
             '@type': 'Offer',

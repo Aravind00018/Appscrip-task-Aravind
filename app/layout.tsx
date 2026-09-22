@@ -8,8 +8,10 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://appscrip-task-aravind.vercel.app';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mettamuse.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'mettā muse | Discover Our Products',
     template: '%s | mettā muse',

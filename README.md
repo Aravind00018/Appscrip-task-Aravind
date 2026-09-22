@@ -86,7 +86,7 @@ npm run lint
   - Filter visible: Sidebar (290px) + 3-column CSS Grid.
   - Filter hidden: Full-width 4-column CSS Grid.
 - **Tablet (768px - 1024px)**:
-  - 2-column CSS Grid with adapted spacing.
+  - Preserves 3-column grid (with filter visible) and 4-column grid (with filter hidden) with scaled sidebar width (240px).
 - **Mobile (375px - 414px)**:
   - Header with mobile hamburger menu.
   - Toolbar with compact `FILTER` button opening a slide-out filter drawer.
@@ -94,7 +94,7 @@ npm run lint
 
 ### 4. SEO & Structured Data
 - Single semantic `<h1>DISCOVER OUR PRODUCTS</h1>` per page.
-- Comprehensive metadata: Title, Meta Description, Canonical URL (`https://mettamuse.com/shop`), OpenGraph, and Twitter cards.
+- Comprehensive metadata: Title, Meta Description, Canonical URL (`https://appscrip-task-aravind.vercel.app`), OpenGraph, and Twitter cards.
 - JSON-LD Structured Data Schema (`CollectionPage` and `ItemList`) containing product pricing, availability, and descriptions for search engines.
 
 ### 5. Accessibility (a11y) & Performance
@@ -138,11 +138,13 @@ appscrip/
 
 ---
 
-## 🌐 Deployment Instructions
+## 🌐 Repository & Deployment
+- **GitHub Repository**: [https://github.com/Aravind00018/Appscrip-task-Aravind](https://github.com/Aravind00018/Appscrip-task-Aravind)
+- **Live Deployment**: [https://appscrip-task-aravind.vercel.app](https://appscrip-task-aravind.vercel.app)
 
 ### Deploying to Netlify / Vercel
-1. Push the code to a public GitHub repository named `Appscrip-task-[YourName]`.
-2. Connect the repository to **Netlify** or **Vercel**.
+1. Repository is named `Appscrip-task-Aravind`.
+2. Connect the repository to **Vercel** or **Netlify**.
 3. Build Settings:
    - **Framework Preset**: Next.js
    - **Build Command**: `npm run build`
